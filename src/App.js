@@ -2,49 +2,44 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  // let x =10;  
-  // x = 5;
-  // console.log(x); //5
-// ----------------------------------------//
-  // const x =10;
-  // x = 5;
-  // console.log(x); //error
+  //================== is Array ======================//
+  // let arr =[21,22,23,24,25];
+  //  let ans= Array . isArray(arr)
+  //  console.log(ans);   //true
 
-  // ----------------------------------------//
+//==================== concat =========================//
+  // let arr = [21,22,23,24,25];
+   //let arr1 =[199,200];
+  // let newarr = arr.concat(arr1);
+  // console.log(newarr); //) [21, 22, 23, 24, 25, 199, 200]
 
-  // let x;
-  // x=5;
-  // console.log(x); //5
-
-  // ----------------------------------------//
-  
-// ====== Block scope =====================//
+//=========================================================//
+  //let arr = [21,22,23,24,25];
+  //let arr1 =[199,200];
+  // let ans = arr.some((a) => a =>30);
+  // console.log(ans);  // true
  
-    //  const x=5;  //global scope
-    //  {
-    //   const x= 10; //local scope
-    //  }
-      // console.log(x);//5
-//===============arroe function===================//
-  // const display = (name,id) => {
-  //   console.log(name,id);
-  // }
-  // display ("urmil",9); //function call
-  //===================arrae===========================//
-      // let grid =[12,18,26,27,46,"x"];
-      // console.log(grid [3],grid);
-//===================is array =========================//
-// let arr =[12,18,26,27,46];
-// let ans = Array.isArray (arr)
-// console.log(ans);
+  //======================== to string ===================================//
 
-//===================splice =========================//
+  // let arr =[21,22,23,24,25];
+  // console.log(arr.toString(arr));//21,22,23,24,25
+//=================== find ==========================//  
+  // let arr =[21,22,23,24,25];
+  //  let ans =arr.find ((a) => a =>30);
+  //  console.log(ans);  //21,22,23,24,25
 
-// let arr = [10,20,30];
-// arr.splice (2,0,99); // add 99 at 2and index
-// arr.solice (1,2); // delet 2 element from 1st index
+  //let arr =[21,22,23,24,25];
+  // arr.splice(2,0,99); //  [21, 22, 99, 23, 24, 25] element add 
+ // arr.splice(2,2)  // element delet .
+  //console.log(arr); 
 
-// console.log(arr);
+  //=================== object ========================//
+  //    let obj = {
+  //   id : 6462,
+  //   namr : "urmil"
+  // };
+  // console.log(obj.id,obj["name"]); //6462 {id: 6462, namr: 'urmil'}
+
   return (
     <div className="App">
       <header className="App-header">
