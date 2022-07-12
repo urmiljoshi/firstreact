@@ -53,7 +53,7 @@ function App() {
 // }
 
 // let {id,name}=obj
-// console.log(name,obj.id); //urmil 6462
+// console.log(name,obj.id); //urmil 6462//
 
 return (
     <div className="App">
