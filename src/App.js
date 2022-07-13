@@ -2,77 +2,70 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-   //====== Array =====//
+   let data=
+    [
+      {
+        id: 101,
+        name: 'Abacavir',
+        quantity: 25,
+        price: 150,
+        expiry: 2022,
+        status: true
+      },
+      {
+        id: 102,
+        name: 'Eltrombopag',
+        quantity: 90,
+        price: 550,
+        expiry: 2021,
+        status: true
+      },
+      {
+        id: 103,
+        name: 'Meloxicam',
+        quantity: 85,
+        price: 450,
+        expiry: 2025,
+        status: false
+      },
+      {
+        id: 104,
+        name: 'Allopurinol',
+        quantity: 50,
+        price: 600,
+        expiry: 2023,
+        status: true
+      },
+      {
+        id: 105,
+        name: 'Phenytoin',
+        quantity: 63,
+        price: 250,
+        expiry: 2021,
+        status: false
+      }
+     ];
 
-//  let arr =[5,4,6,8,9];
+    let fdate = data.filter((v,i) => v.expiry >=2022 && v.status===true);
+     console.log(fdate);
 
-//=================== copy array =====================//
-
-//let arr1=[...arr];
-//console.log(arr1); // 5,4,6,8,9
-
-//========================== merging array ======================//
-
-// let arr =[1,2,3,54,5];
-// let arr2=[100,200];
-
-// let ans = [...arr,...arr2];
-// console.log(ans); //(7) [1, 2, 3, 54, 5, 100, 200]
-
-//===================== destructuring =========================//
-
-// let arr = [11,12,15,14,18];
-// const [j,h,g,f,r] = arr;
-// console.log(g);  //15
-
-//========== Object =========//
-
-//  let obj ={
-//    id: 111,
-//    name: 'ajay'
-// }
-
-//=================== copy Object =====================//
-//let obj1={...obj};
-//console.log(obj1); //{id: 111, name: 'ajay'}
-
-//========================== merging obj======================//
-
-//let obj2={
-  //id:6462,
-  // name:'urmil',
-  //place:'surat'
-// }
-// let ans={...obj,...obj2};
-// console.log(ans); //{id: 6462, name: 'urmil', place: 'surat'}
-//===================== destructuring =====================//
- 
-// let obj={
-//   id:6462,
-//   name:'urmil'
-// }
-
-// let {id,name}=obj
-// console.log(name,obj.id); //urmil 6462//
-
+     let totalprice = fdate.reduce((acc,v,i) => acc + v.price,0)
+     console.log(totalprice);
 return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+   <div>
+        {
+         fdate.map((v,i) =>{
+            return (
+              <div key = {i}>
+                <h1>{v.name}</h1>
+                <h4>{v.price}</h4>
+              </div>
+            )
+          })
+        }    
     </div>
   );
 }
+
 
 export default App;
