@@ -55,6 +55,7 @@ return (
                 <h1>{v.name}</h1>
                 <h4>{v.bonus}</h4>
                 <h5>{v. salary}</h5>
+                <h3>{v.bonus + v.salary}</h3>
               </div>
             )
           })
