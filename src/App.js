@@ -56,10 +56,12 @@ return (
                 <h4>{v.bonus}</h4>
                 <h5>{v. salary}</h5>
                 <h3>{v.bonus + v.salary}</h3>
+                <h2>{v.status.toString()}</h2>
               </div>
             )
           })
-        }    
+        } 
+        <h3>total  :-{salary}</h3>   
     </div>
   );
 }
