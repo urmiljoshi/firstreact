@@ -3,64 +3,57 @@ import './App.css';
 
 function App() {
    let data=
-    [
-      {
-        name: "amit",
-        age: 35,
-        salary: 40000,
-        bonus: 1000,
-        status: true
-      },
-      {
-        name: "ajay",
-        age: 25,
-        salary: 38000,
-        bonus: 2000,
-        status: false
-      },
-      {
-        name: "mayur",
-        age: 23,
-        salary: 50000,
-        bonus: 500,
-        status: true
-      },
-      {
-        name: "jay",
-        age: 29,
-        salary: 35000,
-        bonus: 600,
-        status: true
-      },
-      {
-        name: "raj",
-        age: 33,
-        salary: 22000,
-        bonus: 2000,
-        status: true
-      },
-     ]
+   [
+    {
+      grid: 123,
+      name: 'Amit',
+      fees: 50000,
+      attendance: 80
+    },
+    {
+      grid: 456,
+      name: 'Ajay',
+      fees: 70000,
+      attendance: 90
+    },
+    {
+      grid: 856,
+      name: 'Ashish',
+      fees: 30000,
+      attendance: 65
+    },
+    {
+      grid: 762,
+      name: 'Raj',
+      fees: 90000,
+      attendance: 70
+    },
 
-    let mdata = data.filter((v,i) => v.status === true);
-     console.log(mdata);
+  ]
 
-     let salary = mdata.reduce((acc,v,i) => acc + v.salary + v.bonus ,0)
-     console.log(salary); 
+    let fdata = data.filter((v,i) => v.attendance < 71);
+     console.log(fdata);
+
+     let total = fdata.reduce((acc,v,i) => acc + v.fees ,0)
+     console.log(total); 
 return (
    <div>
         {
-       data.map((v,i) =>{
+       fdata.map((v,i) =>{
             return (
               <div key = {i}>
                 <h1>{v.name}</h1>
-                <h4>{v.bonus}</h4>
-                <h5>{v. salary}</h5>
-                <h3>{v.bonus + v.salary}</h3>
+                <h4>{v.grid}</h4>
+                <h5>{v. fees}</h5>
+                
               </div>
+              
             )
           })
-        }    
+        }
+        <h3>total :- {total}</h3>    
     </div>
+    
   );
 }
 
